@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Button } from 'antd';
-
+import React from "react";
+import { Layout, Menu } from 'antd';
+import "./App.scss";
 function App() {
+  const { Header, Content } = Layout;
   return (
     <div className="App">
-      <header className="App-header">
-        <Button type="primary">Button</Button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Layout className="layout">
+          <Header>
+            <div className="logo">Xbrother</div>
+            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
+              <Menu.Item key="1">流程编辑器</Menu.Item>
+              <Menu.Item key="2">表单编辑器</Menu.Item>
+              <Menu.Item key="3">个人工作台</Menu.Item>
+            </Menu>
+          </Header>
+          <Content style={{ height: '100%' }}>
+            <div className="site-layout-content">Content</div>
+          </Content>
+        </Layout>
     </div>
   );
 }
