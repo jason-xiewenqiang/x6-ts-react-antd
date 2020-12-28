@@ -1,0 +1,16 @@
+.login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  .img {
+    flex: 1;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+  }
+  .login-form {
+    width: 35%;
+    background-color: palevioletred;
+  }
+}
