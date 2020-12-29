@@ -8,7 +8,11 @@ function login() {
       <div className="img">
         <img src={cat} alt="" />
       </div>
-      <div className="login-form"></div>
+      <div className="login-form">
+        <div className="form">
+          
+        </div>
+      </div>
     </div>
   );
 }
