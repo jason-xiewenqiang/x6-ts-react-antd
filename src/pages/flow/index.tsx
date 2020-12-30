@@ -5,10 +5,12 @@ import LeftBar from "./components/leftBar";
 import CenterBox from "./components/centerBox";
 
 function Flow() {
-  return (<div className="Flow"> 
-    <LeftBar />
-    <CenterBox />
-    <RightPanel />
-  </div>);
+  return (
+    <div className="Flow">
+      <LeftBar />
+      <CenterBox />
+      <RightPanel />
+    </div>
+  );
 }
 export default Flow;

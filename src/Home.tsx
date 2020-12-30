@@ -67,7 +67,7 @@ function Home() {
             <div className="logout">
               <Avatar size={32} icon={<UserOutlined />} />
               <Dropdown overlay={menu} placement="bottomLeft">
-                <span className="user-name">Admin</span>
+                <span className="user-name">admin</span>
               </Dropdown>
             </div>
           </Header>

@@ -3,7 +3,7 @@ import { Action } from "../types/global";
 export const LOGIN_TYPE = "login";
 
 const INITIAL_STATE = {
-  isLogin: !!window.sessionStorage.getItem('isLogin'),
+  isLogin: window.sessionStorage.getItem('isLogin') === 'true' ? true : false,
 };
 
 export default function global(state = INITIAL_STATE, action: Action) {

@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Form, Input, Checkbox } from "antd";
+import { Button, Form, Input, Checkbox, message } from "antd";
+import { LockOutlined, UserOutlined, InfoCircleOutlined } from '@ant-design/icons';
 import cat from "./assets/img/cat.jpg";
 import "./Login.scss";
 import { login } from './reducers/action';
@@ -20,10 +21,16 @@ function Login() {
 
   const onFinish = (values: any) => {
     console.log("Success:", values);
+    const { username } = values;
     NProgress.start();
     setTimeout(() => {
       NProgress.done();
-      dispatch(login(true));
+      if (username !== 'admin') {
+        message.error('用户名或密码错误');
+      } else {
+        message.success('登陆成功');
+        dispatch(login(true));
+      }
     }, 1500)
   };
   
@@ -51,23 +58,21 @@ function Login() {
             onFinishFailed={onFinishFailed}
           >
             <Form.Item
-              label="用户名"
               name="username"
               rules={[
                 { required: true, message: "请输入用户名" },
               ]}
             >
-              <Input />
+              <Input prefix={<UserOutlined className="site-form-item-icon"/>} placeholder="请输入用户名(admin)"/>
             </Form.Item>
 
             <Form.Item
-              label="密码"
               name="password"
               rules={[
                 { required: true, message: "请输入密码" },
               ]}
             >
-              <Input.Password />
+              <Input.Password prefix={<LockOutlined />} placeholder="请输入密码(随意)"/>
             </Form.Item>
 
             <Form.Item {...tailLayout} name="remember" valuePropName="checked">
