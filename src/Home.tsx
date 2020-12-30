@@ -55,10 +55,10 @@ function Home() {
             <div className="logo">Jason & murphy</div>
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
               <Menu.Item key="1">
-                <Link to="/home/flow">流程编辑器</Link>
+                <Link to="/home/flow">拖拽编辑器</Link>
               </Menu.Item>
               <Menu.Item key="2">
-                <Link to="/home/form">表单编辑器</Link>
+                <Link to="/home/form">布局编辑器</Link>
               </Menu.Item>
               <Menu.Item key="3">
                 <Link to="/home/workbench">个人工作台</Link>
