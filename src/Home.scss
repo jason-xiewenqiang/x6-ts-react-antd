@@ -19,5 +19,21 @@
       text-align: center;
       color:#fff;
     }
+    .ant-menu {
+      display: inline-block;
+    }
+    .logout {
+      float: right;
+      height: 100%;
+    }
+    .user-name {
+      display: inline-block;
+      width: auto;
+      height: 32px;
+      line-height: 36px;
+      font-size: 16px;
+      margin-left: 15px;
+      color: seashell;
+    }
   }
   
