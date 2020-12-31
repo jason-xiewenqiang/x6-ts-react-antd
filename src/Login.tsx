@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Form, Input, Checkbox, message } from "antd";
-import { LockOutlined, UserOutlined, InfoCircleOutlined } from '@ant-design/icons';
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import cat from "./assets/img/cat.jpg";
 import "./Login.scss";
 import { login } from './reducers/action';

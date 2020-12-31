@@ -1,4 +1,75 @@
+$title-height: 40px;
+$title-border: 1px solid rgba(0,0,0,.08);
+$condition-width: 60px;
+$countesign-width: 70px;
 .left-bar {
-    width: 300px;
-    height: 100%;
+  width: 300px;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: $title-border;
+  .title {
+    height: $title-height;
+    line-height: $title-height;
+    box-sizing: border;
+    border-top: $title-border;
+    border-bottom: $title-border;
+    color: #1890ff;
+    background-color: #f7f9fb;
+    cursor: default;
+    text-align: center;
+  }
+  .component {
+    height: calc(100% - 50px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    .component-item {
+      width: 50%;
+      height: auto;
+      display: inline-block;
+      margin-bottom: 20px;
+      text-align: center;
+      min-height: 60px;
+      line-height: 60px;
+      .node {
+        width: 80px;
+        height: 42px;
+        border-radius: 20px;
+        border: 2px solid rgb(95, 149, 255);
+        font-size: 14px;
+        text-align: center;
+        line-height: 40px;
+        color: #333;
+        user-select: none;
+        cursor: move;
+        display: inline-block;
+        background-color: rgba(95,149,255,0.05);
+      }
+      .start-node {
+        border-radius: 20px;
+      }
+      .user-node {
+        border-radius: 0;
+      }
+      .condition-node {
+        background: pink;
+        transform: rotate(45deg);
+        text-align: center;
+        border-radius: 0;
+        width: $condition-width;
+        height: $condition-width;
+        line-height: $condition-width;
+        span {
+          display: inline-block;
+          transform: rotate(-45deg);
+        }
+      }
+      .countersign-node {
+        line-height: $countesign-width;
+        width: $countesign-width;
+        height: $countesign-width;
+        border-radius: 100%;
+      }
+    }
+  }
 }

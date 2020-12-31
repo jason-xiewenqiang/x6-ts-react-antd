@@ -1,0 +1,23 @@
+@-moz-document url-preix {
+    * {
+        scrollbar-width: none;
+        scrollbar-color: transparent transparent;
+        scrollbar-track-color: transparent;
+        -ms-scroll-track-color: transparent;
+    }
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-button {
+    background-color: none;
+}
+::-webkit-scrollbar-track {
+    background: none;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}

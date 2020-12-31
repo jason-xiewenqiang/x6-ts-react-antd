@@ -1,0 +1,15 @@
+<svg width="148" height="50" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="52" width="150" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_10" d="m23.810188,0.000003l100.379627,0l0,0c13.150017,0 23.810186,11.192886 23.810186,25.000004c0,13.807113 -10.660174,24.999995 -23.810186,24.999995l-100.379627,0l0,0c-13.150002,0 -23.810186,-11.192881 -23.810186,-24.999995c0,-13.807123 10.660184,-25.000004 23.810186,-25.000004z" fill-opacity="null" stroke-opacity="null" stroke-width="null" stroke="#000" fill="#fff"/>
+  <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="16" id="svg_11" y="30.5" x="41.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#000000">用户任务</text>
+ </g>
+</svg>
