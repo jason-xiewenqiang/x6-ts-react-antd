@@ -52,7 +52,7 @@ function Home() {
       <Layout className="layout">
         <Router>
           <Header>
-            <div className="logo">Jason & murphy</div>
+            <div className="logo">LOGO-Place</div>
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
               <Menu.Item key="1">
                 <Link to="/home/flow">拖拽编辑器</Link>
