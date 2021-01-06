@@ -5,7 +5,7 @@ import startSvg from '../../../../assets/svg/start.svg';
 import countersignSvg from '../../../../assets/svg/countersign.svg';
 import condition from '../../../../assets/svg/condition.svg';
 
-function leftBar() {
+function LeftBar() {
   const nodes = [
     { name: '起始节点', key: 'start' },
     { name: '用户节点', key: 'approver' },
@@ -54,4 +54,4 @@ function leftBar() {
   </div>;
 }
 
-export default leftBar;
+export default LeftBar;
