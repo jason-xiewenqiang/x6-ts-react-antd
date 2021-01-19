@@ -1,4 +1,17 @@
 .center-box {
     width: calc(100% - 580px);
     height: 100%;
+    position: relative;
+    .tool-bar {
+        height: 40px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #f7f9fb;
+        z-index: 2;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    #view-root-box {}
 }

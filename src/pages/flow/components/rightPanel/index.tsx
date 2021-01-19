@@ -1,7 +1,11 @@
 import React from "react";
 import "./rightPanel.scss";
+import CanvasPanel from './canvasProperty';
+import NodePanel from './nodeProperty';
 
-function rightPanel() {
-  return <div className="right-panel"> right panel </div>;
+function RightPanel() {
+  return <div className="right-panel">
+    <CanvasPanel/>
+  </div>;
 }
-export default rightPanel;
+export default RightPanel;

@@ -5,7 +5,7 @@ import "./leftBar.scss";
 // import countersignSvg from '../../../../assets/svg/countersign.svg';
 // import condition from '../../../../assets/svg/condition.svg';
 
-function leftBar() {
+function LeftBar() {
   return <div className="left-bar">
     <div className="title">组件库</div>
     <div className="component">
@@ -48,4 +48,4 @@ function leftBar() {
   </div>;
 }
 
-export default leftBar;
+export default LeftBar;
