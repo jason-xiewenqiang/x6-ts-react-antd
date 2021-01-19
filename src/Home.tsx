@@ -52,8 +52,11 @@ function Home() {
       <Layout className="layout">
         <Router>
           <Header>
-            <div className="logo">LOGO-Place</div>
+            <div className="logo">数据中心</div>
             <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
+            <Menu.Item key="0">
+                <Link to="/home/workbench">首页</Link>
+              </Menu.Item>
               <Menu.Item key="1">
                 <Link to="/home/flow">拖拽编辑器</Link>
               </Menu.Item>

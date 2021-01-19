@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import { Graph, Dom, Addon, Shape } from "@antv/x6";
 import { nodes } from "./nodes";
-import { Drawer } from 'antd';
+import { Drawer, Button } from 'antd';
 
 const { Dnd } = Addon;
 
@@ -500,11 +500,35 @@ class Flow extends React.Component {
     });
   };
 
+  onExport = () => {
+    const json = this.graph.toJSON();
+    const blobContent = new Blob(
+      [JSON.stringify(json, null, 2)],
+      {type : 'application/json'}
+    );
+    const blobUrl = window.URL.createObjectURL(blobContent)
+    downloadFileByBlob(blobUrl, 'config.json');
+    window.URL.revokeObjectURL(blobUrl);
+    function downloadFileByBlob(blobUrl: string, filename: string) {
+      const eleLink = document.createElement('a')
+      eleLink.download = filename
+      eleLink.style.display = 'none'
+      eleLink.href = blobUrl
+      // 触发点击
+      document.body.appendChild(eleLink)
+      eleLink.click()
+      // 然后移除
+      document.body.removeChild(eleLink)
+    }
+    
+  }
+
   render() {
     const { placement, visible } = this.state;
     return (
       <div className="Flow">
         <div className="dnd-wrap">
+          <Button type="primary" onClick={this.onExport}>导出画布JSON</Button>
           {nodes.map((node: any, index: number) => (
             <div
               data-type={node.shape}
