@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Form, Input, Checkbox, message } from "antd";
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import cat from "./assets/img/cat.jpg";
 import "./Login.scss";
 import { login } from './reducers/action';
 import { useSelector, useDispatch } from 'react-redux';
@@ -42,7 +41,7 @@ function Login() {
     <div className="login"> { isLogin && <Redirect to="/home" /> }
       <div className="img">
         <div className="title">Fine 数据中心平台</div>
-        <img src={cat} alt="" />
+        {/* <img src={cat} alt="" /> */}
       </div>
       <div className="login-form">
         <div className="form">
@@ -76,7 +75,7 @@ function Login() {
             </Form.Item>
 
             <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-              <Checkbox>记住密码</Checkbox>
+              <Checkbox><span style={{color: '#fff'}}>记住密码</span></Checkbox>
             </Form.Item>
 
             <Form.Item {...{wrapperCol: { offset: 0, span: 24 }}}>

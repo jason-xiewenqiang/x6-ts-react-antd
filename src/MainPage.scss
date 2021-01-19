@@ -1,0 +1,34 @@
+.main-page {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    rgb(15, 44, 112),
+    rgb(19, 107, 145),
+    rgba(15, 44, 112, 0.8)
+  );
+  box-sizing: border-box;
+  padding: 8px;
+  > .ant-row {
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 !important;
+    > .ant-col {
+      .ant-row {
+        height: 33.33%;
+        box-sizing: border-box;
+        padding: 5px;
+      }
+    }
+    .center {
+      .ant-row {
+        height: 50%;
+        box-sizing: border-box;
+        padding: 5px;
+      }
+      .d3-box {
+        border:rgb(19, 107, 145) 1px solid;
+      }
+    }
+  }
+}

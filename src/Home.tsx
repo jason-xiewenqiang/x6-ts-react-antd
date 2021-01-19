@@ -1,13 +1,15 @@
 import React from "react";
-import { Layout, Menu, Avatar, Dropdown } from "antd";
+import { Layout, Menu, Avatar, Dropdown, Image } from "antd";
 import { PoweroffOutlined, UserOutlined, BugOutlined } from '@ant-design/icons';
 import Flow from "./pages/flow";
 import Form from "./pages/form";
 import Workbench from "./pages/workbench";
+import MainPage from './MainPage';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from './reducers/action';
 import NProgress from 'nprogress';
+import manJpg from './assets/img/man.jpeg'; 
 import {
   BrowserRouter as Router,
   Route,
@@ -19,7 +21,7 @@ import "./Home.scss";
 function Home() {
   const { Header, Content } = Layout;
   const history = useHistory();
-  const dispacth = useDispatch();
+  const dispatch = useDispatch();
   const handleMenuClick = (e:any) => { 
     console.log(e)
     const {key} = e;
@@ -27,7 +29,7 @@ function Home() {
       NProgress.start()
       setTimeout(() => {
         NProgress.done()
-        dispacth(login(false))
+        dispatch(login(false))
       }, 800)
     }
     if (key === '2') {
@@ -53,9 +55,9 @@ function Home() {
         <Router>
           <Header>
             <div className="logo">数据中心</div>
-            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
+            <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["0"]}>
             <Menu.Item key="0">
-                <Link to="/home/workbench">首页</Link>
+                <Link to="/home/index">首页</Link>
               </Menu.Item>
               <Menu.Item key="1">
                 <Link to="/home/flow">拖拽编辑器</Link>
@@ -68,7 +70,7 @@ function Home() {
               </Menu.Item>
             </Menu>
             <div className="logout">
-              <Avatar size={32} icon={<UserOutlined />} />
+              <Avatar size={32} icon={<Image src={manJpg} />} />
               <Dropdown overlay={menu} placement="bottomLeft">
                 <span className="user-name">admin</span>
               </Dropdown>
@@ -78,8 +80,9 @@ function Home() {
             <Route
               exact
               path="/home"
-              render={() => <Redirect to="/home/flow" />}
+              render={() => <Redirect to="/home/index" />}
             ></Route>
+            <Route path="/home/index" component={MainPage}></Route>
             <Route path="/home/flow" component={Flow}></Route>
             <Route path="/home/form" component={Form}></Route>
             <Route path="/home/workbench" component={Workbench}></Route>
