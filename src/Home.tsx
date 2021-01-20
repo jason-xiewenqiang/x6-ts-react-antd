@@ -59,14 +59,14 @@ function Home() {
             <Menu.Item key="0">
                 <Link to="/home/index">首页</Link>
               </Menu.Item>
+              <Menu.Item key="3">
+                <Link to="/home/workbench">工作台</Link>
+              </Menu.Item>
               <Menu.Item key="1">
                 <Link to="/home/flow">拖拽编辑器</Link>
               </Menu.Item>
               <Menu.Item key="2">
                 <Link to="/home/form">布局编辑器</Link>
-              </Menu.Item>
-              <Menu.Item key="3">
-                <Link to="/home/workbench">个人工作台</Link>
               </Menu.Item>
             </Menu>
             <div className="logout">

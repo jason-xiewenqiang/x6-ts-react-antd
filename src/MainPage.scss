@@ -13,21 +13,49 @@
     height: 100%;
     box-sizing: border-box;
     margin: 0 !important;
-    > .ant-col {
+    .center {
+      .ant-row {
+        height: 90%;
+        box-sizing: border-box;
+        padding: 5px;
+        .ant-col {
+          box-sizing: border-box;
+          // background-color: rgba(15, 44, 112, 0.2);
+          // padding: 5px;
+        }
+        .textCenter {
+          text-align: center;
+        }
+        .show {
+            display: block;
+        }
+        .hide {
+            display: none;
+        }
+      }
+      .title {
+        height: 10%;
+        line-height: 1.2;
+        text-align: center;
+        font-size: 32px;
+        .ant-col {
+          background-color: transparent;
+        }
+      }
+      .chart-line {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .left,
+    .right {
+      .ant-row .ant-col {
+        background-color: rgba(15, 44, 112, 0.3);
+      }
       .ant-row {
         height: 33.33%;
         box-sizing: border-box;
         padding: 5px;
-      }
-    }
-    .center {
-      .ant-row {
-        height: 50%;
-        box-sizing: border-box;
-        padding: 5px;
-      }
-      .d3-box {
-        border:rgb(19, 107, 145) 1px solid;
       }
     }
   }
